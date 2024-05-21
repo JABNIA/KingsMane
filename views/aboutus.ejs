@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs') %>
+
+  <div id="salonlogo">
+    <img src="assets/images/kingsmane-logo.jpg" alt="wsgfisebfigswf8igwofhil" />
+    <div id="description">
+        <% content.forEach(e => { %>
+            <p class="desc"><%= e.text %></p>
+       <% }) %>
+    </div>
+  </div>
+
+  <%- include('partials/footer.ejs') %> 

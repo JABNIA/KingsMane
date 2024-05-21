@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %> <%- include('partials/nav.ejs') %>
+
+<main>
+  <section id="welcome" data-i="home">
+    <div id="banner"></div>
+    <div id="welcome-text">
+      <p>
+        Ladies and Gentleman! Welcome to
+        <span class="important">"Kings Mane"</span>, the brand new Barbershop
+      </p>
+      <p>
+        Here you can have best servive possible. We will take care your hair,
+        beard, mustache, skin, nails and e.c.
+      </p>
+      <p>With Us you will have accses to the best among the best Barbers.</p>
+      <p>
+        With years of experience, skills an talent they achieved fascinating
+        results
+      </p>
+      <p>We humbly ask you to, allow us to take care of you.</p>
+    </div>
+  
+  <div id="about">
+    <h2>What do we offer</h2>
+    <% content.forEach(element => {%>
+    <div class="wrapper">
+      <img
+        src="<%= element.imgUrl%>"
+        alt=""
+        class="about-image"
+        style="<%= element.float %>"
+      />
+      <p><%= element.text %></p>
+    </div>
+    <% }) %>
+  </div>
+  </section>
+</main>
+
+<%- include('partials/footer.ejs')%>

@@ -1,0 +1,86 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs') %>
+
+<div id="booking-container">
+    <div id="booking-forms">
+        <div id="forms">
+            <form action="" method="post">
+                <div class="form-item">
+                    <label for="day" class="labels">SELECT DAY:</label>
+                    <select name="day" class="inputs" id="workday">
+                        <option value=""></option>
+                        <% day.forEach((e) => { %>
+                            <option value="<%= e %>"><%= e %></option>
+                            <% }) %>
+                        </select>
+                </div> 
+                <div class="form-item">
+                    <label for="day" class="labels">SELECT BARBER:</label>
+                    <select name="barber" class="inputs" id="barb" disabled>
+                        <option value=""></option>
+                        <option value="bob">Bob</option>
+                        <option value="john">John</option>
+                        <option value="joey">Joey</option>
+                        <option value="phil">Phil</option>
+                    </select>    
+                </div> 
+                <div class="form-item">
+                    <label for="day" class="labels">SELECT TIME:</label>
+                    <select name="hour" class="inputs" id="time" disabled>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="day" class="labels">SELECT SEX:</label>
+                    <select name="sex" id="gender" class="inputs" disabled> 
+                        <option value="none"></option>
+                        <option value="male">King</option>
+                        <option value="female">Queen</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="day" class="labels">CLINET NAME:</label>
+                    <input type="text" class="inputs" name="name">
+                </div>
+                <div class="form-item">
+                    <label for="day" class="labels">EMAIL:</label>
+
+                    <input type="email" class="inputs" name="email">
+                </div>
+                <div class="form-item">
+                    <input type="submit" id="submitBook" value="Book Visit">
+                </div>
+                <div id="man" class="inactive servicelist">
+                    <% man.forEach( e => { %>
+                        <div>
+                            <input type="checkbox" name="service" value="<%= e.service %>"><label for="service"><%= e.service %> <%= e.price %>$</label>
+                        </div>
+                    <% }) %>
+                </div>
+                <div id="woman" class="inactive servicelist">
+                    <% women.forEach( e => { %>
+                        <div>
+                            <input type="checkbox" name="service" value="<%= e.service %>"><label for="service"><%= e.service %> <%= e.price %>$</label>
+                        </div>
+                    <% }) %>
+                </div>
+            </form>
+        </div>
+        <div id="dataBase">
+            <div id="dayBtns">
+                <% day.forEach((e) => { %>
+                    <div class="dayBtn" id="<%= e %>"><%= e %></div>
+                <% }) %>
+            </div>
+            <div id="table"></div>
+        </div>
+        
+    </div>
+    <% if (code) {%>
+        <div class="codeSection">
+            <h1><%= code %></h1>
+            <p>This is your order code. Please remember it correctly, or write it down</p>
+        </div>
+    <% } %>
+</div>
+<%- include('partials/footer.ejs') %>

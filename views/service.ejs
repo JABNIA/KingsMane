@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/nav.ejs') %>
+
+<div id="service-wrapper">
+  <table>
+    <tr>
+      <th>Servise</th>
+      <th>Price</th>
+    </tr>
+
+    <% man.forEach(e => { %>
+    <tr>
+      <td><%= e.service %></td>
+      <td><%= e.price %></td>
+    </tr>
+    <% }) %>
+  </table>
+  <div class="img-div">
+    <img
+      src="assets/images/man.png"
+      alt=""
+      class="service-icon"
+      style="filter: hue-rotate(50deg) invert(0%)"
+    />
+  </div>
+</div>
+
+<div id="service-wrapper">
+  <table>
+    <tr>
+      <td>Service Name</td>
+      <td>Price</td>
+    </tr>
+    <% women.forEach(e => { %>
+    <tr>
+      <td><%= e.service %></td>
+      <td><%= e.price %></td>
+    </tr>
+    <% }) %>
+  </table>
+  <div class="img-div">
+    <img src="assets/images/woman.png" alt="" class="service-icon" />
+  </div>
+</div>
+<%- include('partials/footer.ejs') %>

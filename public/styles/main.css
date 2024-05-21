@@ -1,0 +1,437 @@
+@font-face {
+  font-family: BodyFont;
+  src: url("../assets/fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: NameFont;
+  src: url("../assets/fonts/Lobster-Regular.ttf");
+}
+
+:root {
+  --bg-color: rgb(48, 4, 4);
+  --font-color: wheat;
+  --imp-color: rgb(206, 181, 41);
+}
+
+html {
+  margin: 0px;
+  padding: 0px;
+}
+body * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: BodyFont;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  color: var(--font-color);
+}
+
+#body-wrapper {
+  height: 100vh;
+  background-image: url(/assets/images/background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.shop-name {
+  font-family: NameFont;
+  font-size: 150px;
+  color: var(--imp-color);
+}
+
+header {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(76, 8, 8, 1),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 15px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#logo {
+  height: 200px;
+}
+
+.logo {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.navigation {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  background-color: var(--bg-color);
+  border-radius: 25px;
+}
+
+.nav-item {
+  width: 15%;
+  border-left: 1px solid beige;
+  text-align: center;
+  font-size: 24px;
+  text-align: center;
+  color: beige;
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+.nav-item:hover {
+  background-color: var(--imp-color);
+  color: black;
+}
+
+#welcome-text {
+  font-family: NameFont;
+  margin: auto;
+  width: 800px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid var(--font-color);
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+}
+
+.important {
+  background-color: var(--bg-color);
+  color: var(--imp-color);
+  font-family: NameFont;
+}
+
+#welcome-text > p {
+  font-family: NameFont;
+}
+
+#banner {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 1500px;
+  height: 400px;
+  background-image: url(/assets/images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -500px;
+  border-radius: 5px;
+}
+
+#about {
+  text-align: center;
+  width: 1500px;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 18px;
+  padding: 15px;
+  background-color: var(--bg-color);
+}
+#about > * {
+  background-color: var(--bg-color);
+  padding: 15px;
+  border-radius: 5px;
+}
+section {
+  margin: auto;
+  width: 1800px;
+  border-bottom: 1px solid var(--font-color);
+  padding: 20px;
+}
+
+.about-image {
+  width: 400px;
+  height: 266px;
+  margin: 0px 15px;
+}
+
+.wrapper {
+  width: 1200px;
+  height: 300px;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 24px;
+  text-align: left;
+  flex-direction: row;
+  border-radius: 5px;
+}
+footer {
+  height: 100px;
+  width: 1800px;
+  margin: auto;
+  padding: 25px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 1px solid var(--font-color);
+  border-radius: 5px 5px 0px 0px;
+}
+
+#socials {
+  font-size: 36px;
+}
+a {
+  text-decoration: none;
+}
+#socials > a:visited {
+  color: var(--font-color);
+}
+
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+table,
+tr,
+td,
+th {
+  padding: 30px;
+  font-size: 24px;
+  border: 1px solid var(--font-color);
+  border-collapse: collapse;
+}
+
+td{
+  width: 50px;
+  height: 30px;
+  font-size: 12px;
+  border: 1px solid var(--font-color);
+  border-collapse: collapse;
+}
+
+#service-wrapper {
+  width: 1500px;
+  margin: auto;
+  padding: 50px;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  border: 1px solid var(--font-color);
+}
+
+.img-div {
+  width: 400px;
+  height: 400px;
+  background-color: var(--font-color);
+  border-radius: 50%;
+}
+
+.service-icon {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-top: 25px;
+}
+
+#salonlogo {
+  width: 100%;
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+  padding: 20px;
+}
+#salonlogo > img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#description {
+  width: 1200px;
+  margin: auto;
+  border: 1px solid var(--font-color);
+  border-radius: 5px;
+}
+
+.desc {
+  width: 1200px;
+  height: auto;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  margin: auto;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#booking-container{
+  background-color: var(--bg-color);
+  width: 1500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  height: 1100px;
+  border-radius: 5px;
+}
+#dayBtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+.dayBtn {
+  text-align: center;
+  width: 130px;
+  background-color: var(--bg-color);
+  font-size: 24px;
+  border: 1px solid var(--font-color);
+  border-collapse: collapse;
+}
+
+.dayBtn:hover{
+  background-color: var(--imp-color);
+  color: black;
+}
+
+.nav-link{
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+#hoursservice {
+  width: 100%;
+}
+
+
+#hoursservice * {
+  padding: 0px;
+  text-align: center;
+}
+
+#booking-forms{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputs{
+  width: 15em;
+  height: 3em;
+  display: block;
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+
+#submitBook{
+  width: 10em;
+  height: 2em;
+  margin-left: 5em;
+  margin-top: 1em;
+  font-size: 24px;
+  border: 1px solid var(--imp-color);
+  background-color: var(--imp-color);
+  color: var(--bg-color);
+}
+
+#submitBook:hover{
+  background-color: var(--bg-color);
+  color: var(--imp-color);
+}
+.inactive {
+  display: none;
+}
+
+.servicelist{
+  width: 500px;
+  border: 1px solid var(--font-color);
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.servicelist * {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#contact-info  {
+  margin: auto;
+  margin-top: 3em;
+  width: 80em;
+  background-color: var(--bg-color);
+  padding: 3em 10em;
+  box-sizing: border-box;
+  display: flex;
+  gap: 2em;
+  border-radius: 5px;
+}
+
+#con-info > p {
+  font-size: 1.5em;
+}
+
+#barber-img {
+  background-image: url(/assets/images/barber-img.jpg);
+  background-size: cover;
+  background-color: var(--bg-color);
+  background-position-y: 0px;
+  height: 750px ;
+  width: 80em;
+  margin: auto;
+  background-repeat: no-repeat;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item{
+  width: 30em;
+  height: 3em;
+  margin: 1.5em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.labels {
+  margin-top: 45px;
+  font-size: 1.3em;
+  width: 5em;
+}
+
+#workday {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+
+.codeSection {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  margin: 20px 0px;
+  margin-bottom: 100px
+}
+
+#dataBase {
+  display: flex;
+  flex-direction: column;
+}
